@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.gevdev.looper.LeekspinActivity" tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+            android:text="0"
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/leek_loopCounter"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/leek_textLooped3"
+            app:layout_constraintStart_toEndOf="@+id/leek_chrono" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="84dp" app:layout_constraintHorizontal_bias="0.5"/>
+    <VideoView
+            android:id="@+id/leek_videoview"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_height="0dp"
+            android:layout_width="414dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.533"
+            android:layout_marginBottom="1dp" app:layout_constraintBottom_toTopOf="@+id/leek_textLooped3"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leek_chrono" android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/leek_textLooped3"
+            app:layout_constraintEnd_toStartOf="@+id/leek_loopCounter" android:layout_marginBottom="364dp"
+            app:layout_constraintStart_toStartOf="@+id/leek_textLooped"
+            android:layout_marginStart="58dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="149dp" app:layout_constraintEnd_toEndOf="@+id/leek_textLooped"/>
+    <TextView
+            android:text="Time Looped"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/leek_textLooped" android:textSize="32sp"
+            android:layout_marginBottom="404dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/leek_textLooped3" android:layout_marginEnd="22dp"
+    />
+    <TextView
+            android:text="Loop Count"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/leek_textLooped3" android:textSize="32sp"
+            app:layout_constraintTop_toBottomOf="@+id/leek_videoview"
+            app:layout_constraintStart_toEndOf="@+id/leek_textLooped"
+            app:layout_constraintEnd_toEndOf="@+id/leek_loopCounter"
+            app:layout_constraintBottom_toTopOf="@+id/leek_chrono" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="@+id/leek_loopCounter"/>
+
+</android.support.constraint.ConstraintLayout>
